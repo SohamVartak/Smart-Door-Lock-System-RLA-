@@ -1,0 +1,34 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+
+# Private SmartDoor data — never commit enrolled faces or security footage
+faces/
+recordings/
+*.avi
+*.mp4
+*.mkv
+*.jpg
+*.jpeg
+*.png
+
+# Android/Gradle local files and build outputs
+.gradle/
+**/build/
+local.properties
+*.iml
+.idea/
+
+# Arduino build outputs
+*.elf
+*.bin
+*.hex
+*.map
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
