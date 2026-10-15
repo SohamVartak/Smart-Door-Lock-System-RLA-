@@ -57,9 +57,8 @@ class DoorServerCallbacks : public BLEServerCallbacks {
 
 class DoorCommandCallbacks : public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic* characteristic) override {
-    // ESP32 BLE Arduino versions vary: getValue() may return std::string.
-    std::string raw = characteristic->getValue();
-    String command = String(raw.c_str());
+    // This ESP32 Arduino BLE version returns Arduino String from getValue().
+    String command = characteristic->getValue();
     command.trim();
     if (command.length() == 0) return;
 
